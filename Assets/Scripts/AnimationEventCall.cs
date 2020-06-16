@@ -7,7 +7,7 @@ public class AnimationEventCall : MonoBehaviour
 
     void Update()
     {
-
+        
     }
 
     public void Shoot()

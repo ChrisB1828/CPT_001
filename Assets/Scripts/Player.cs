@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _jumpForce = 6.0f; //players jump hight
     [SerializeField]
-    private float _speed = 6.0f; //players speed
+    private float _speed = 7.0f; //players speed
 
     private bool _resetJump;
     private bool _isAttacking;
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private Animator _animation;
     private Weapons _weapons;
 
-    private bool _facingRight = true; // which way player ar currently daceing
+    private bool _facingRight = true; // which way player ar currently faceing
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
         Movement();
         Jump();
         Attack();
-        Debug.DrawRay(transform.position, Vector2.down * 1.5f, Color.green); //To show RayCast
+        Debug.DrawRay(transform.position, Vector2.down * 1.8f, Color.green); //To show RayCast
     }
 
     void Movement() // movment - left, right and jump
@@ -50,13 +50,11 @@ public class Player : MonoBehaviour
 
         if (move > 0 && !_facingRight)
         {
-            Flip2();
-            //Flip(true);
+            Flip3();
         }
         else if (move < 0 && _facingRight)
         {
-            Flip2();
-            //Flip(false);
+            Flip3();  
         }
 
         _rigid.velocity = new Vector2(move * _speed, _rigid.velocity.y);
@@ -87,7 +85,7 @@ public class Player : MonoBehaviour
 
     bool IsGrounded() //to chech if player is grounded
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 1.5f, 1 << 8);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 1.8f, 1 << 8);
         if (hitInfo.collider != null)
         {
             if (_resetJump == false)
@@ -121,11 +119,16 @@ public class Player : MonoBehaviour
     {
         _facingRight = !_facingRight;
 
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
+
+    public void Flip3()
+    {
+        _facingRight = !_facingRight;
+
         transform.Rotate(0f, 180f, 0f);
-
-        //Vector3 scale = transform.localScale;
-        //scale.x *= -1;
-        //transform.localScale = scale;
-
+        
     }
 }
