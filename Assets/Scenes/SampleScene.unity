@@ -236,6 +236,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda62ce7dcb70524f93b3773ac91c727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &326952455
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2140062483870760818, guid: 44e2af6bee134804dac3c92ba7314323,
+        type: 3}
+      propertyPath: m_Name
+      value: attack1 shoot 80x80_0 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100594608583526397, guid: 44e2af6bee134804dac3c92ba7314323,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100594608583526397, guid: 44e2af6bee134804dac3c92ba7314323,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100594608583526397, guid: 44e2af6bee134804dac3c92ba7314323,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100594608583526397, guid: 44e2af6bee134804dac3c92ba7314323,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100594608583526397, guid: 44e2af6bee134804dac3c92ba7314323,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100594608583526397, guid: 44e2af6bee134804dac3c92ba7314323,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100594608583526397, guid: 44e2af6bee134804dac3c92ba7314323,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100594608583526397, guid: 44e2af6bee134804dac3c92ba7314323,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100594608583526397, guid: 44e2af6bee134804dac3c92ba7314323,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100594608583526397, guid: 44e2af6bee134804dac3c92ba7314323,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100594608583526397, guid: 44e2af6bee134804dac3c92ba7314323,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44e2af6bee134804dac3c92ba7314323, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +636,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1467913149}
   - component: {fileID: 1467913150}
+  - component: {fileID: 1467913152}
+  - component: {fileID: 1467913151}
   m_Layer: 0
   m_Name: Enemy001
   m_TagString: Untagged
@@ -606,6 +677,58 @@ MonoBehaviour:
   gems: 0
   pointA: {fileID: 2106337486}
   pointB: {fileID: 762436048}
+--- !u!61 &1467913151
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467913148}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.071884155, y: 1.0129402}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6142845, y: 1.1176782}
+  m_EdgeRadius: 0
+--- !u!61 &1467913152
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467913148}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.15030384, y: -0.7449827}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8300915, y: 2.3854074}
+  m_EdgeRadius: 0
 --- !u!1 &1597949580
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,8 +855,6 @@ MonoBehaviour:
   _firePoint: {fileID: 932659421}
   _projectilePrefab: {fileID: 2140062483870760818, guid: 44e2af6bee134804dac3c92ba7314323,
     type: 3}
-  _fireRate: 0.5
-  _nextFire: 0
 --- !u!70 &1597949587
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

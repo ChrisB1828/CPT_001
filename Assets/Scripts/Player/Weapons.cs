@@ -6,14 +6,11 @@ public class Weapons : MonoBehaviour
 {
     public Transform _firePoint;
     public GameObject _projectilePrefab;
-    public float _fireRate = 1F;
-    public float _nextFire = 0.0f; 
 
     void Update()
     {
-        //Shoot();
+        
     }
-
 
     public void Shoot()
     {

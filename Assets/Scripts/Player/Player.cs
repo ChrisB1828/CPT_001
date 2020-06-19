@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
 
     private bool _resetJump;
     private bool _isAttacking;
-    //private bool _grounded = false;
     private PlayerAnimation _playerAnim;
     private SpriteRenderer _playerSprite;
     private Animator _animation;
@@ -31,12 +30,10 @@ public class Player : MonoBehaviour
     }
 
     void Update()
-    {
-        
+    { 
         Movement();
         Jump();
         Attack();
-        Debug.DrawRay(transform.position, Vector2.down * 1.8f, Color.green); //To show RayCast
     }
 
     void Movement() // movment - left, right and jump
@@ -45,8 +42,6 @@ public class Player : MonoBehaviour
         IsGrounded(); //need to input code for falling animation!!!!!
 
         float move = Input.GetAxisRaw("Horizontal"); //movement
-
-        //_grounded = IsGrounded();
 
         if (move > 0 && !_facingRight)
         {
@@ -66,13 +61,11 @@ public class Player : MonoBehaviour
     {  
         if ( Input.GetKeyDown(KeyCode.Space) && IsGrounded() == true) //jumping
         {
-            //_playerAnim.JumpAnim(true);
             //_rigid.AddForce(new Vector2(0f, _jumpForce));
             _rigid.velocity = new Vector2(_rigid.velocity.x, _jumpForce);
             StartCoroutine(ResetJumpNeededRoutine());
             _playerAnim.JumpAnim(); //jumping animation when jumping
-        }
-        
+        }  
     }
 
     void Attack()
@@ -92,8 +85,6 @@ public class Player : MonoBehaviour
             {
                 return true;
             }
-            //_playerAnim.JumpAnim(false);
-            //return true;
         }
         return false;
     }
