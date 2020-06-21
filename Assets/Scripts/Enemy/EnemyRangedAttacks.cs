@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile1 : MonoBehaviour
+public class EnemyRangedAttacks : MonoBehaviour
 {
-    public float _speed = 10f;
     public int _damage = 10;
 
     private bool _canDamge = true;
+    private Animator _anim;
 
     public Rigidbody2D _rigidbody;
 
-    void Start()
+    private void Update()
     {
-        _rigidbody.velocity = transform.right * _speed;
+        Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
     }
 
     void OnTriggerEnter2D(Collider2D _hitInfo)
@@ -22,15 +22,15 @@ public class Projectile1 : MonoBehaviour
 
         if (hit != null)
         {
-            if (_canDamge == true)
-            {
-                hit.TakeDamage(_damage);
-                _canDamge = false;
-                StartCoroutine(ResetDamage());
-            } 
-        }
+            hit.TakeDamage(_damage);
 
-        Destroy(gameObject);
+            //if (_canDamge == true)
+            //{
+                //hit.TakeDamage(_damage);
+                //_canDamge = false;
+                //StartCoroutine(ResetDamage());
+            //}
+        }
     }
 
     IEnumerator ResetDamage()

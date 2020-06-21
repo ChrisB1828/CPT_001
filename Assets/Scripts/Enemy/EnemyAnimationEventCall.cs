@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationEventCall : MonoBehaviour
+public class EnemyAnimationEventCall : MonoBehaviour
 {
-
     public void Shoot()
     {
-        Weapons _parentScript = this.transform.parent.GetComponent<Weapons>();
+        EnemyWeapons _parentScript = this.transform.parent.GetComponent<EnemyWeapons>();
         _parentScript.Shoot();
     }
 }
