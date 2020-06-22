@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour, IDamageable
 {
-    private Rigidbody2D _rigid;
-    
     [SerializeField]
     private float _jumpForce = 6.0f; //players jump hight
     [SerializeField]
@@ -14,12 +12,15 @@ public class Player : MonoBehaviour, IDamageable
     protected int _health;
     public int Health { get; set; }
 
+    public int orangeGems;
+
     private bool _resetJump;
     private bool _isAttacking;
     private PlayerAnimation _playerAnim;
     private SpriteRenderer _playerSprite;
     private Animator _animation;
     private Weapons _weapons;
+    private Rigidbody2D _rigid;
 
     private bool _facingRight = true; // which way player ar currently faceing
 

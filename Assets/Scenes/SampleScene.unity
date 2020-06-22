@@ -615,9 +615,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035e604654524bc489daa7b98455146a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gemPrefab: {fileID: 6457056115761804616, guid: b3f66afc40a76c0459439e418c58c0f7,
+    type: 3}
   health: 0
   speed: 1
-  gems: 0
+  gems: 1
   pointA: {fileID: 2106337486}
   pointB: {fileID: 762436048}
 --- !u!61 &1467913151
@@ -762,6 +764,7 @@ MonoBehaviour:
   _jumpForce: 6
   _speed: 7
   _health: 1000
+  orangeGems: 0
 --- !u!114 &1597949586
 MonoBehaviour:
   m_ObjectHideFlags: 0
