@@ -137,7 +137,7 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-    public void AttackAnimEnded()
+    public void AttackAnimEnded() 
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttack") && anim.GetBool("InCombat") == false)
         {

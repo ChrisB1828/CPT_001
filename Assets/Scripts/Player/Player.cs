@@ -5,9 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour, IDamageable
 {
     [SerializeField]
-    private float _jumpForce = 6.0f; //players jump hight
+    private float _jumpForce = 6.0f; 
     [SerializeField]
-    private float _speed = 7.0f; //players speed
+    private float _speed = 7.0f; 
     [SerializeField]
     protected int _health;
     public int Health { get; set; }
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour, IDamageable
     private Weapons _weapons;
     private Rigidbody2D _rigid;
 
-    private bool _facingRight = true; // which way player ar currently faceing
+    private bool _facingRight = true; // which way player ar currently faceing (Right)
 
     void Start()
     {
@@ -70,11 +70,10 @@ public class Player : MonoBehaviour, IDamageable
     void Jump()
     {  
         if ( Input.GetKeyDown(KeyCode.Space) && IsGrounded() == true) //jumping
-        {
-            //_rigid.AddForce(new Vector2(0f, _jumpForce));
+        {   
             _rigid.velocity = new Vector2(_rigid.velocity.x, _jumpForce);
             StartCoroutine(ResetJumpNeededRoutine());
-            _playerAnim.JumpAnim(); //jumping animation when jumping
+            _playerAnim.JumpAnim();
         }  
     }
 
@@ -105,7 +104,7 @@ public class Player : MonoBehaviour, IDamageable
         _resetJump = false;
     }
 
-    void Flip(bool faceRight) //Fliping animations
+    void Flip(bool faceRight) 
     {
         if (faceRight == true)
         {
